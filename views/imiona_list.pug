@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title
+  
+  table(style='width:40%', border='0')
+   tr
+    th Rok
+    th Płeć
+    th Imię
+    th Liczba wystąpień
+    th ID
+
+  
+   each imie in imiona_list
+     tr 
+       td  #{imie.Rok} 
+       td  #{imie.Płeć} 
+       td  #{imie.Imię} 
+       td  #{imie.Liczba}	
+       td  #{imie._id}
+
+   else
+     tr Nic tu nie ma.

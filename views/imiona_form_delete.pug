@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='ID') ID:
+      input#imieID.form-control(type='text' placeholder='' name='imieID' required='true' value=(undefined===imiona ? '' : imiona._id))
+   
+
+    button.btn.btn-primary(type='submit') Delete
+
+  p=end

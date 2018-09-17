@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='Rok') Rok:
+      input#Rok.form-control(type='text' placeholder='2222' name='Rok' required='true' value=(undefined===imiona ? '' : imiona.Rok) )
+      label(for='Imię') Imię:
+      input#Imie.form-control(type='text' placeholder='Kuba' name='Imię' required='true' value=(undefined===imiona ? '' : imiona.Imię))
+      label(for='Płeć') Płeć:
+      input#Plec.form-control(type='text' placeholder='K/M' name='Płeć' required='true' value=(undefined===imiona ? '' : imiona.Płeć))
+      label(for='Liczba') Liczba:
+      input#Liczba.form-control(type='text' placeholder='1000' name='Liczba' required='true' value=(undefined===imiona ? '' : imiona.Liczba))
+    button.btn.btn-primary(type='submit') Submit
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg
+
+  p=end
